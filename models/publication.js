@@ -8,6 +8,9 @@ const publicationSchema = new mongoose.Schema(
       maxlength: 300,
       trim: true //spaces at beginning and end are removed
     },
+    picture: {
+      type: String
+    },
     creator: {
       //objectId of another document
       type: mongoose.Types.ObjectId,

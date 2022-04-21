@@ -1,12 +1,15 @@
 <h1>Create new meow</h1>
 
-<form action='' method='POST'>
+{{!enctype="multipart/form-data" => encodes the picture  }}
+<form action='' method='POST' enctype='multipart/form-data'>
   <label for='input-message'>Message</label>
   <textarea
     name='message'
     id='input-message'
     placeholder='Message..'
   ></textarea>
-
+  {{! allows only images }}
+  <label for='input-picture'>Upload a picture</label>
+  <input id='input-picture' type='file' accept='image/*' name='picture' />
   <button>Publish Meow</button>
 </form>

@@ -1,0 +1,15 @@
+<p>
+  {{publication.message}}
+</p>
+
+<small>
+  {{publication.createdAt}}
+</small>
+
+<em>{{publication.creator.name}}</em>
+
+<a href='/meow/{{publication._id}}/edit'>Edit</a>
+
+<form action='/meow/{{publication._id}}/delete' method='post'>
+  <button>DeleteMeow</button>
+</form>

@@ -11,6 +11,7 @@ router.get('/', (req, res, next) => {
     //fetches documents from the user collection and gets the user with the ObjectId
     //replaces the values of the "publications.creator" with the user object
     .populate('creator')
+    .sort({ createdAt: -1 }) //sorts the data to the newest first
     .then((publications) => {
       res.render('home', { publications });
     })

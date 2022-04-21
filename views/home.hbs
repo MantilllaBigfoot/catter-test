@@ -1,8 +1,12 @@
 {{#each publications}}
-  <div>
-    <p>{{message}}</p>
-    <small>{{createdAt}}</small>
-    <small>{{creator.name}}</small>
-
-  </div>
+  <a href='/meow/{{_id}}' class='publication-item'>
+    {{#if picture}}
+      <img src='{{picture}}' alt='picture' />
+    {{/if}}
+    <div>
+      <p>{{message}}</p>
+      <small>{{createdAt}}</small>
+      <small>{{creator.name}}</small>
+    </div>
+  </a>
 {{/each}}
